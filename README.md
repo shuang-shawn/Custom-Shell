@@ -21,3 +21,32 @@ To compile and run the custom shell, ensure you have:
 - A C compiler (e.g., GCC)
 - Standard C libraries
 - A Unix-like environment (Linux or macOS)
+
+- ## Usage
+
+1. **Compilation**: Compile the source code (`shell.c`) using your preferred C compiler. For example:
+gcc shell.c -o shell
+
+2. **Execution**: Run the compiled executable:
+./shell
+
+3. **Shell Commands**:
+- Enter commands as you would in a standard shell environment.
+- Use `exit` to exit the shell.
+- Use `cd` to change directories.
+- Append `&` to a command to run it in the background.
+- Use `&&` to execute commands sequentially.
+- Use `&&&` to execute commands in parallel.
+
+## Examples
+
+- Running a command in the foreground:
+  `$ ls -l`
+- Running a command in the background:
+  `$ sleep 10 &`
+- Changing directory:
+  `$ cd /path/to/directory`
+- Sequential execution of commands:
+  `$ echo "Hello" && echo "World"`
+- Parallel execution of commands:
+  `$ echo "Hello" &&& echo "World"`
